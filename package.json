@@ -1,0 +1,17 @@
+{
+  "name": "gdl-assessment",
+  "version": "1.0.0",
+  "description": "Assessment implementing small GDL-like system",
+  "main": "site/index.html",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "author": "Martijn Vos",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine-core": "^3.2.1",
+    "karma": "^3.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2"
+  }
+}
