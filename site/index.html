@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./site.css">
+  </head>
+  <body>
+    <main>
+      <h1>GDL demo site</h1>
+      <nav>
+        <a href="#/sign-up">sign up</a>
+        <a href="#/ship-now">ship now</a>
+        <a href="#/how-to-ship">how to ship</a>
+      </nav>
+
+      <section id="sign-up" class="active">
+        <h2>Sign up</h2>
+        <form name="signup-step1">
+          <label>
+            <span>your company name</span>
+            <input type="text" name="company-name">
+          </label>
+          <label>
+            <span>your email address</span>
+            <input type="text" name="email-address">
+          </label>
+          <input type="submit" value="create account">
+          <span class="thanks">success!</span>
+          <span class="error">oops, try again!</span>
+        </form>
+        Read more:
+        <a href="#/how-to-ship" button-name="how-to-ship">How to ship a parcel</a>
+      </section>
+
+      <section id="ship-now">
+        <h2>Start shipping</h2>
+        <form name="ship-now-step1">
+          <label>
+            <span>where would you like to send a parcel?</span>
+            <select>
+              <option value="BR">Brazil</option>
+              <option value="FR">France</option>
+              <option value="IT">Italy</option>
+              <option value="NL">Netherlands</option>
+              <option value="ES">Spain</option>
+            </select>
+          </label>
+          <input type="submit" value="Ship now">
+          <span class="thanks">success!</span>
+          <span class="error">oops, try again!</span>
+        </form>
+        Read more:
+        <a href="#/how-to-ship" button-name="how-to-ship">How to ship a parcel</a>
+      </section>
+      
+      <section id="how-to-ship">
+        <h2>How to create a shipment</h2>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat <a href="#">cupidatat</a> non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Sed ut <a href="#">perspiciatis</a> unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, <a href="#">consectetur</a>, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore.</p>
+      </section>
+
+    </main>
+    <script src="./site.js"></script>
+  </body>
+</html>
