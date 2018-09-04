@@ -1,0 +1,50 @@
+[
+  {
+    "description": "The user visits a page",
+    "category": "pageview",
+    "name": "pageview",
+    "payload": { "pageId": "string" }
+  },
+  {
+    "description": "The user submits the 'sign up step 1' form",
+    "category": "sign-up",
+    "name": "form-submit",
+    "payload": { "formName": "string", "company": "string", "email": "string" }
+  },
+  {
+    "description": "An error occurred while processing the 'sign up step 1' form",
+    "category": "sign-up",
+    "name": "form-submit-error",
+    "payload": { "formName": "string", "errorMessage": "string" }
+  },
+  {
+    "description": "The user clicks a link on the 'sign up' page",
+    "category": "sign-up",
+    "name": "click-link",
+    "payload": { "linkName": "string" }
+  },
+  {
+    "description": "The user submits the 'ship now step 1' form",
+    "category": "ship-now",
+    "name": "form-submit",
+    "payload": { "formName": "string", "selectedCountry": "string" }
+  },
+  {
+    "description": "An error occurred while processing the 'ship now step 1' form",
+    "category": "ship-now",
+    "name": "form-submit-error",
+    "payload": { "formName": "string", "errorMessage": "string" }
+  },
+  {
+    "description": "The user clicks a link on the 'ship now' page",
+    "category": "ship-now",
+    "name": "click-link",
+    "payload": { "linkName": "string" }
+  },
+  {
+    "description": "The user clicks a link on the 'about us' page",
+    "category": "about-us",
+    "name": "click-link",
+    "payload": { "linkName": "string" }
+  }
+]
