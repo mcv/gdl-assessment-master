@@ -65,12 +65,10 @@
     <script src="./relay42Wrapper.js"></script>
     <script src="./gdl.js"></script>
   <script>
-    console.log("create gdl");
     window.gdl = new GDL();
     gdl.subscribe("pageview", GaWrapper.pageview);
     gdl.subscribe("event", GaWrapper.event);
     gdl.subscribe("event", Relay42Wrapper.event);
-    console.log("done gdl");
   </script>
     <script src="./site.js"></script>
   </body>
