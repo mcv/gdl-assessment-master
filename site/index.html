@@ -13,14 +13,14 @@
 
       <section id="sign-up" class="active">
         <h2>Sign up</h2>
-        <form name="signup-step1">
+        <form name="sign-up">
           <label>
             <span>your company name</span>
-            <input type="text" name="company-name">
+            <input type="text" name="company">
           </label>
           <label>
             <span>your email address</span>
-            <input type="text" name="email-address">
+            <input type="text" name="email">
           </label>
           <input type="submit" value="create account">
           <span class="thanks">success!</span>
@@ -32,10 +32,10 @@
 
       <section id="ship-now">
         <h2>Start shipping</h2>
-        <form name="ship-now-step1">
+        <form name="ship-now">
           <label>
             <span>where would you like to send a parcel?</span>
-            <select>
+            <select name="selectedCountry">
               <option value="BR">Brazil</option>
               <option value="FR">France</option>
               <option value="IT">Italy</option>
@@ -59,6 +59,19 @@
       </section>
 
     </main>
+    <script src="./event.js"></script>
+    <script src="./event-handler.js"></script>
+    <script src="./gaWrapper.js"></script>
+    <script src="./relay42Wrapper.js"></script>
+    <script src="./gdl.js"></script>
+  <script>
+    console.log("create gdl");
+    window.gdl = new GDL();
+    gdl.subscribe("pageview", GaWrapper.pageview);
+    gdl.subscribe("event", GaWrapper.event);
+    gdl.subscribe("event", Relay42Wrapper.event);
+    console.log("done gdl");
+  </script>
     <script src="./site.js"></script>
   </body>
 </html>
