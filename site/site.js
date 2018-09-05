@@ -18,7 +18,8 @@
     gdl.payloadDefinition(category, eventname, def => {
       let payload = {};
       for (let key in def.payload) {
-        if (key === "formName") payload.formName = form.name;
+        if (key === "formName")     payload.formName = form.name;
+        else if (key === "errorMessage") payload.errorMessage = def.description;
         else payload[key] = form.elements[key].value;
       };
 
@@ -35,8 +36,9 @@
   let page = null;
 
   function handleRoute(url) {
-    gdl.publish("pageview", "pageview", url);
     const [ , pageId ] = /#\/(.+)$/.exec(url) || [];
+    console.log("pageId: ",pageId);
+    gdl.publish("pageview", "pageview", {pageId: pageId});
     if (pageId) {
       page = pageId;
       navigateTo(pageId);

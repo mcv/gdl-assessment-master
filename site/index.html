@@ -59,17 +59,20 @@
       </section>
 
     </main>
-    <script src="./event.js"></script>
-    <script src="./event-handler.js"></script>
+    <script src="./ga.js"></script>
+    <script src="./relay42.js"></script>
     <script src="./gaWrapper.js"></script>
     <script src="./relay42Wrapper.js"></script>
     <script src="./gdl.js"></script>
-  <script>
-    window.gdl = new GDL();
-    gdl.subscribe("pageview", GaWrapper.pageview);
-    gdl.subscribe("event", GaWrapper.event);
-    gdl.subscribe("event", Relay42Wrapper.event);
-  </script>
+    <script type="text/javascript">
+      window.gdl = new GDL();
+      gdl.subscribe("pageview", "pageview", GaWrapper.pageview);
+      let events = [["sign-up", "form-submit"], ["sign-up", "form-submit-error"], ["ship-now", "form-submit"], ["ship-now", "form-submit-error"], ["sign-up", "click-link"], ["ship-now", "click-link"], ["about-us", "click-link"]];
+      events.forEach(([category, name]) => {
+        gdl.subscribe(category, name, GaWrapper.event);
+        gdl.subscribe(category, name, Relay42Wrapper.event);
+      });
+    </script>
     <script src="./site.js"></script>
   </body>
 </html>
